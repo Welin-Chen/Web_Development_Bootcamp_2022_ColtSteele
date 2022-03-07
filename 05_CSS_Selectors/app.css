@@ -1,0 +1,99 @@
+/* * {
+  background-color: cyan;
+} */
+
+body {
+  background-color: #f1faee;
+}
+button {
+  font-size: 30px;
+  background-color: #a8dadc;
+}
+
+h1,
+h2 {
+  color: darkblue;
+}
+
+#signup {
+  background-color: #1d3557;
+  color: #f1faee;
+}
+
+span {
+  color: #457b9d;
+}
+
+.tag {
+  /* background-color: #e63946; */
+  color: #f1faee;
+  font-size: 16px;
+}
+
+.post a {
+  color: #457b9d;
+  text-decoration: none;
+}
+
+footer a {
+  color: #e63946;
+}
+
+input + button {
+  background-color: pink;
+}
+
+h2 + button {
+  font-size: 20px;
+  background-color: magenta;
+}
+
+footer > a {
+  color: #457b9d;
+}
+
+input[type="password"] {
+  color: #e63946;
+}
+
+/* section[class="post"] {
+  background-color: purple;
+} */
+
+a[href*="google"] {
+  color: magenta;
+}
+
+.post a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.post button:active {
+  background-color: #2a9d8f;
+}
+
+.post:nth-of-type(2n) {
+  background-color: #d1d9ce;
+}
+
+h2::first-letter {
+  font-size: 50px;
+}
+
+p::first-line {
+  color: purple;
+}
+
+p::selection {
+  color: #f4a261;
+}
+
+.post button:hover {
+  background-color: #e63946;
+  color: #f1faee;
+}
+
+button:hover {
+  background-color: olive;
+}

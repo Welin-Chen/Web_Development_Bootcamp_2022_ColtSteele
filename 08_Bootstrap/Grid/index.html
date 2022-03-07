@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Basics</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="display-1 text-center text-primary">The Grid System</h1>
+        <div class="row">
+            <div class="col-2 bg-success">I am 2 units</div>
+            <div class="col-8 bg-danger">I am 8 units</div>
+            <div class="col-2 bg-success">I am 2 units</div>
+        </div>
+
+        <div class="row">
+            <div class="col-3 bg-info">I am 3 units</div>
+            <div class="col-6 bg-warning">I am 6 units</div>
+            <div class="col-3 bg-info">I am 3 units</div>
+        </div>
+
+        <div class="row">
+            <div class="col bg-primary">I am auto sized</div>
+            <div class="col bg-secondary">I am auto sized</div>
+            <div class="col-8 bg-primary">I am auto sized</div>
+        </div>
+
+        <h2 class="display-4">Resposive Grid</h2>
+        <div class="row align-items-center">
+            <div class="col-md- col-lg-3 bg-danger">Lorem ipsum, dolor sit amet consectetur
+                adipisicing elit. Facilis
+                molestiae
+                voluptatum
+                eveniet? Esse, minus fugit! Repellendus excepturi dolore ad saepe id beatae, earum eum sit libero
+                laudantium nam incidunt ex.</div>
+            <div class="col-md-6 col-lg-3 bg-warning">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis
+                molestiae
+                voluptatum
+                eveniet? Esse, minus fugit! Repellendus excepturi dolore ad saepe id beatae, earum eum sit libero
+                laudantium nam incidunt ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas laboriosam
+                magni magnam quasi dolorum aut ducimus vel adipisci, nisi voluptatum, officiis architecto in modi
+                mollitia ipsum nulla, rerum amet repudiandae?
+                Ullam id reprehenderit explicabo reiciendis dolorum consequatur molestias mollitia quam repudiandae.
+                Dolore quidem, cum officiis corrupti nisi magnam dolorum, neque minus porro tempore quibusdam, laborum
+                excepturi eius perferendis beatae accusamus.</div>
+            <div class="col-md-6 col-lg-3 bg-success">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis
+                molestiae
+                voluptatum
+                eveniet? Esse, minus fugit! Repellendus excepturi dolore ad saepe id beatae, earum eum sit libero
+                laudantium nam incidunt ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eum
+                asperiores unde cumque, labore illo! Ab labore, incidunt voluptatum ex, quasi magni eum accusamus itaque
+                corrupti nesciunt, dicta porro? Omnis!</div>
+            <div class="col-md-6 col-lg-3 bg-info align-self-end">Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit. Facilis
+                molestiae
+                voluptatum
+                eveniet? Esse, minus fugit! Repellendus excepturi dolore ad saepe id beatae, earum eum sit libero
+                laudantium nam incidunt ex.</div>
+        </div>
+
+        <h3>Justify Content</h3>
+        <div class="row border justify-content-center justify-content-lg-start justify-content-xl-between">
+            <div class="col-md-4 bg-primary">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, soluta repudiandae quo deleniti tenetur
+                vero quaerat ducimus non ullam hic iste, itaque sunt consequuntur accusantium minima eum est,
+                repellendus sint.
+            </div>
+
+            <div class="col-md-4 bg-info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, soluta repudiandae quo deleniti tenetur
+                vero quaerat ducimus non ullam hic iste, itaque sunt consequuntur accusantium minima eum est,
+                repellendus sint.
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-xl-4 col-md-6">
+                <img class="img-fluid"
+                    src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80"
+                    alt="bird-1">
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <img class="img-fluid"
+                    src="https://images.unsplash.com/photo-1539664030485-a936c7d29c6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+                    alt="bird-2">
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <img class="img-fluid"
+                    src="https://images.unsplash.com/photo-1548960095-770e3e6364de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=985&q=80"
+                    alt="bird-3">
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

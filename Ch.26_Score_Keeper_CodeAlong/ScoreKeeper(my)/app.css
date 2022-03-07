@@ -1,0 +1,70 @@
+div {
+  width: 70%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid gray;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+h1 {
+  display: inline-block;
+  color: black;
+}
+
+.winColor {
+  color: green;
+}
+
+.lossColor {
+  color: red;
+}
+
+#span_title {
+  display: block;
+  border-bottom: 3px solid gray;
+  padding-left: 1rem;
+}
+
+#span_scoreBoard {
+  display: block;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 2rem;
+}
+
+#span_explan {
+  font-size: 1rem;
+  text-align: left;
+  margin-left: 2rem;
+}
+
+label {
+  font-weight: bold;
+  margin-left: 2rem;
+}
+
+button {
+  margin-right: 100em;
+  margin: 0;
+  border: none;
+  width: calc(100% / 3);
+}
+
+#player1 {
+  background-color: rgb(127, 255, 217);
+}
+
+#player2 {
+  background-color: rgb(30, 146, 255);
+}
+
+#reset {
+  background-color: rgb(255, 30, 105);
+}

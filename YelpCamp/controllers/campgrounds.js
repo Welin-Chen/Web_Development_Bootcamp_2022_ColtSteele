@@ -1,5 +1,8 @@
 const Campground = require("../models/campground");
 const { cloudinary } = require("../cloudinary");
+const mbxGeocoding = require("@mapbox/mapbox-sdk/services/geocoding");
+const mapBoxToken = process.env.MAPBOX_TOKEN;
+const goecoder = mbxGeocoding({ accessToken: mapBoxToken });
 
 module.exports.index = async (req, res) => {
   const campgrounds = await Campground.find({});
@@ -11,7 +14,15 @@ module.exports.renderNewForm = (req, res) => {
 };
 
 module.exports.createCampground = async (req, res, next) => {
+  const geoData = await goecoder
+    .forwardGeocode({
+      // query: "Taipei, Taiwan",
+      query: req.body.campground.location,
+      limit: 1,
+    })
+    .send();
   const campground = new Campground(req.body.campground);
+  campground.geometry = geoData.body.features[0].geometry;
   campground.images = req.files.map((f) => ({
     url: f.path,
     filename: f.filename,
@@ -34,13 +45,27 @@ module.exports.renderEditForm = async (req, res) => {
 };
 
 module.exports.updateCampground = async (req, res) => {
+  // 自己加更新地點Map位置
+  const geoData = await goecoder
+    .forwardGeocode({
+      // query: "Taipei, Taiwan",
+      query: req.body.campground.location,
+      limit: 1,
+    })
+    .send();
+  // 自己加更新地點Map位置end
+
   const { id } = req.params;
-  console.log(req.body);
   const campground = await Campground.findByIdAndUpdate(id, {
     ...req.body.campground,
   });
   const imgs = req.files.map((f) => ({ url: f.path, filename: f.filename }));
   campground.images.push(...imgs);
+
+  // 自己加更新地點Map位置
+  campground.geometry = geoData.body.features[0].geometry;
+  // 自己加更新地點Map位置end
+
   await campground.save();
   if (req.body.deleteImages) {
     for (let filename of req.body.deleteImages) {

@@ -44,18 +44,22 @@ const seedDB = async () => {
       description:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste nisi suscipit eaque pariatur magnam qui laboriosam, id maiores recusandae unde quod saepe velit ipsa cum, voluptatem sed maxime deserunt! Doloremque!",
       price,
+      geometry: {
+        type: "Point",
+        coordinates: [-73.9866, 40.7306],
+      },
       images: [
         {
-          url: "https://res.cloudinary.com/dy5qpeauf/image/upload/v1649401514/YelpCamp/yivc8dsyzkvlcgtxn0rt.webp",
-          filename: "YelpCamp/yivc8dsyzkvlcgtxn0rt",
+          url: "https://res.cloudinary.com/dy5qpeauf/image/upload/v1649579620/YelpCamp/star_night_u6ms8t.webp",
+          filename: "YelpCamp/star_night_u6ms8t",
         },
         {
-          url: "https://res.cloudinary.com/dy5qpeauf/image/upload/v1649401515/YelpCamp/hhreu51ddj4lg8tkrwro.webp",
-          filename: "YelpCamp/hhreu51ddj4lg8tkrwro",
+          url: "https://res.cloudinary.com/dy5qpeauf/image/upload/v1649579628/YelpCamp/river_sl8uiq.webp",
+          filename: "YelpCamp/river_sl8uiq.webp",
         },
         {
-          url: "https://res.cloudinary.com/dy5qpeauf/image/upload/v1649401515/YelpCamp/z2jha63z4zoi0q7sitxm.webp",
-          filename: "YelpCamp/z2jha63z4zoi0q7sitxm",
+          url: "https://res.cloudinary.com/dy5qpeauf/image/upload/v1649579645/YelpCamp/start_night2_bcddkn.webp",
+          filename: "YelpCamp/start_night2_bcddkn.webp",
         },
       ],
     });

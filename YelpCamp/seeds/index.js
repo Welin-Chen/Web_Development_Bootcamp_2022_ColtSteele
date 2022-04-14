@@ -1,10 +1,14 @@
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
 const mongoose = require("mongoose");
 const cities = require("./cities");
 const { places, descriptors } = require("./seedHelpers");
 const Campground = require("../models/campground");
 const axios = require("axios");
+const dbUrl = process.env.DB_URL || "mongodb://localhost:27017/yelp-camp";
 
-mongoose.connect("mongodb://localhost:27017/yelp-camp");
+mongoose.connect(dbUrl);
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error"));
@@ -36,7 +40,8 @@ const seedDB = async () => {
     const rand1000 = Math.floor(Math.random() * 1000);
     const price = Math.floor(Math.random() * 20) + 10;
     const camp = new Campground({
-      author: "624b2f54035a01795e4a0854",
+      // author: "624b2f54035a01795e4a0854", //for local MonogoDB
+      author: "6256fe09146de7d59b0afbf9", //for online MongoDB Atlas
       location: `${cities[rand1000].city}, ${cities[rand1000].state}`,
       title: `${sample(descriptors)} ${sample(places)}`,
       // image: "https://source.unsplash.com/collection/483251",
